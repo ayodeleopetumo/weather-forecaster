@@ -1,0 +1,21 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  > img {
+    width: 300px;
+  }
+
+  &__reason {
+    margin-top: 30px;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    > p {
+      font-weight: bold;
+    }
+  }
+}

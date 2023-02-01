@@ -1,0 +1,31 @@
+<mat-card class="banner-card">
+  <mat-card-header>
+    <mat-card-title class="banner-card__heading">Current Weather - {{currentDate}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <h2 class="banner-card__city-name">{{ selectedCityData.name }}</h2>
+
+    <div class="banner-card__content">
+      <div class="banner-card__desc">
+        <div class="banner-card__temp">
+          <img src="https://openweathermap.org/img/wn/{{selectedCityData.weather[0]?.icon}}@4x.png"
+               alt="{{ selectedCityData.weather[0].main }}">
+          <p class="banner-card__temp-text">{{ selectedCityData.main?.temp }} &deg;C</p>
+        </div>
+
+        <p class="banner-card__weather-desc">{{ selectedCityData.weather[0]?.description | titlecase }}</p>
+      </div>
+
+      <div class="banner-card__other-details">
+        <p class="banner-card__feels">Feels like {{ selectedCityData.main?.feels_like }} &deg;C</p>
+        <p class="banner-card__temp-min-max banner-card__icon-text">
+          <span><mat-icon>arrow_downward</mat-icon> {{ selectedCityData.main?.temp_min }} &deg;C</span>
+          <span><mat-icon>arrow_upward</mat-icon> {{ selectedCityData.main?.temp_max }} &deg;C</span>
+        </p>
+        <p class="banner-card__icon-text"><mat-icon>water_drop</mat-icon> Humidity {{ selectedCityData.main?.humidity }}%</p>
+        <p class="banner-card__icon-text"><mat-icon>compress</mat-icon> Pressure {{ selectedCityData.main?.pressure }} hPa</p>
+        <p class="banner-card__icon-text"><mat-icon>air</mat-icon> Wind {{ selectedCityData.wind?.speed }} m/s</p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

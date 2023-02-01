@@ -1,0 +1,9 @@
+<section class="home-container" *ngIf="!isError; else errorPage">
+  <ng-container *ngIf="availableCities?.length">
+    <app-weather-card *ngFor="let city of availableCities" [cardData]="city"></app-weather-card>
+  </ng-container>
+</section>
+
+<ng-template #errorPage>
+  <app-error [errorMessage]="isError"></app-error>
+</ng-template>

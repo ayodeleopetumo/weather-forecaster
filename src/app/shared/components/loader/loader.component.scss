@@ -1,0 +1,25 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  z-index: 11;
+
+  &__text {
+    margin-top: 10px;
+  }
+}
+
+.loader-bg {
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}

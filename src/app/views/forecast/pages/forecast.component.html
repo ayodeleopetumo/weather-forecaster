@@ -1,0 +1,10 @@
+<section class="forecast" *ngIf="!isError; else errorPage">
+  <a class="forecast__go-home" routerLink="/" mat-button color="primary">Go Home</a>
+
+  <app-banner [selectedCityData]="currentCityData"></app-banner>
+  <app-extended-forecast [forecastData]="cityForecast"></app-extended-forecast>
+</section>
+
+<ng-template #errorPage>
+  <app-error [errorMessage]="isError"></app-error>
+</ng-template>

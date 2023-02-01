@@ -1,0 +1,17 @@
+.weather-card {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__temperature,
+  &__wind {
+    display: flex;
+    flex-direction: column;
+
+    & > span {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

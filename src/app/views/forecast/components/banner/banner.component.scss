@@ -1,0 +1,56 @@
+.banner-card {
+  margin-bottom: 30px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  &__temp {
+    display: flex;
+    align-items: center;
+
+    > img {
+      margin-left: -40px;
+    }
+  }
+
+  &__temp-text {
+    color: #49aaaf;
+    font-size: 48px;
+  }
+
+  &__weather-desc {
+    font-size: 20px;
+  }
+
+  &__other-details {
+    padding-right: 150px;
+
+    > * {
+      margin-bottom: 25px;
+    }
+
+    @media screen and (max-width: 800px) {
+      margin-top: 50px;
+    }
+  }
+
+  &__feels {
+    font-size: 24px;
+  }
+
+  &__icon-text,
+  &__icon-text > span {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-text > span:last-of-type {
+    margin-left: 20px;
+  }
+}

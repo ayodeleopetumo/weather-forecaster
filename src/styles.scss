@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+// Material Style Overrides
+@import 'assets/scss/material-ui/overrides';
+@import 'app/views/forecast/components/banner/banner.component.material';
+@import 'app/views/home/components/weather-card/weather-card.component.material';
+@import 'src/app/shared/layout/components/header/header.component.material.scss';
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

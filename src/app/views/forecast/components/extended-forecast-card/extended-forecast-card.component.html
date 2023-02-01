@@ -1,0 +1,36 @@
+<mat-card class="extended-forecast-card">
+  <mat-card-header>
+    <mat-card-title>{{ forecastDate }}</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <div class="extended-forecast-card__image">
+    <img src="https://openweathermap.org/img/wn/{{forecast.weather[0]?.icon}}@4x.png" alt="{{ forecast.weather[0].main }}">
+  </div>
+  <mat-card-content>
+    <div class="extended-forecast-card__content">
+      <div class="extended-forecast-card__desc">
+        <div class="extended-forecast-card__temp">
+          <p class="extended-forecast-card__temp-text">{{ forecast.temp}} &deg;C</p>
+          <p class="extended-forecast-card__weather-desc">{{ forecast.weather[0]?.description | titlecase }}</p>
+        </div>
+
+        <p class="extended-forecast-card__feels">Feels like {{ forecast.feels_like }} &deg;C</p>
+      </div>
+
+      <div class="extended-forecast-card__other-details">
+        <p class="extended-forecast-card__icon-text">
+          <mat-icon>air</mat-icon>
+          <span class="wind">Wind {{ forecast.wind_speed }} m/s</span>
+        </p>
+        <p class="extended-forecast-card__icon-text">
+          <mat-icon>water_drop</mat-icon>
+          <span class="humidity">Humidity {{ forecast.humidity }}%</span>
+        </p>
+        <p class="extended-forecast-card__icon-text">
+          <mat-icon>compress</mat-icon>
+          <span class="pressure">Pressure {{ forecast.pressure }} hPa</span>
+        </p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

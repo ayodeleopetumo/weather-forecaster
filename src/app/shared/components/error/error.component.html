@@ -1,0 +1,10 @@
+<section class="error">
+  <img src="/assets/images/error.png" alt="error">
+  <p>Oops! An error has occurred. Please, use the retry button below</p>
+  <a routerLink="/" mat-button color="primary">Retry</a>
+
+  <div class="error__reason">
+    <p>Error reason (not for the fainthearted):</p>
+    <pre>{{ errorMessage | json }}</pre>
+  </div>
+</section>

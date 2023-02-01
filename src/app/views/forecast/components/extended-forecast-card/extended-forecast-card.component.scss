@@ -1,0 +1,46 @@
+.extended-forecast-card {
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__desc {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__temp-text {
+    color: #49aaaf;
+    font-size: 28px;
+  }
+
+  &__weather-desc {
+    font-size: 16px;
+  }
+
+  &__other-details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 800px) {
+      margin-top: 50px;
+    }
+  }
+
+  &__feels {
+    font-size: 16px;
+  }
+
+  &__icon-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+  }
+}

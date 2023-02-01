@@ -1,0 +1,7 @@
+<div class="extended-forecast">
+  <h2 class="extended-forecast__heading">Extended Forecast - next 6 hours</h2>
+  <mat-divider></mat-divider>
+  <div class="extended-forecast__cards">
+    <app-extended-forecast-card *ngFor="let forecast of forecastReduced" [forecast]="forecast"></app-extended-forecast-card>
+  </div>
+</div>
